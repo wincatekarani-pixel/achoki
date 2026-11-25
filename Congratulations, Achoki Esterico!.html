@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Congratulations, Achoki Esterico!</title>
+<style>
+:root{--bg1:#0b1437;--bg2:#241a66;--gold:#f5c542;--coral:#ff6f91;--teal:#3ddbd9;--text:#f4f1ff;--muted:#c3bdf0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#0b1437;--bg2:#241a66}}
+:root[data-theme="dark"]{--bg1:#0b1437;--bg2:#241a66}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0;background:var(--bg1)}
+body{background:linear-gradient(var(--bg1),var(--bg2)) fixed;color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent}
+.bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.38;animation:fl 16s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:var(--gold);top:-120px;left:-100px}
+.b2{width:380px;height:380px;background:var(--coral);right:-110px;top:35%;animation-delay:-5s}
+.b3{width:360px;height:360px;background:var(--teal);bottom:-130px;left:30%;animation-delay:-10s}
+@keyframes fl{to{transform:translate(60px,-50px) scale(1.18)}}
+#fx{position:fixed;inset:0;z-index:2;pointer-events:none}
+#stage{position:fixed;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;overflow-y:auto;text-align:center;box-sizing:border-box;padding:calc(env(safe-area-inset-top,0px) + 44px) 16px calc(env(safe-area-inset-bottom,0px) + 22px)}
+#stage>:first-child{margin-top:auto}#stage>:last-child{margin-bottom:auto}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;margin:8px 0}
+h1{font-size:clamp(30px,8vw,54px);line-height:1.12}
+h2{font-size:clamp(22px,5.5vw,30px);color:var(--gold)}
+p{margin:8px 0;font-size:clamp(16px,4vw,19px);line-height:1.6;color:var(--muted);max-width:520px}
+.shine{background:linear-gradient(90deg,var(--gold),var(--coral),var(--teal),var(--gold));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:300% 0}}
+.cap{font-size:clamp(80px,22vw,120px);line-height:1;animation:bob 2.4s ease-in-out infinite;cursor:pointer;user-select:none}
+@keyframes bob{50%{transform:translateY(-16px) rotate(6deg)}}
+.btn{font:700 17px system-ui,sans-serif;background:linear-gradient(90deg,var(--gold),#ffb347);color:#2a1a00;border:0;border-radius:999px;padding:14px 30px;margin:16px 8px 8px;cursor:pointer;box-shadow:0 6px 24px #f5c54266;transition:transform .2s;touch-action:manipulation}
+.btn:hover{transform:translateY(-2px) scale(1.03)}
+.btn:focus-visible,#mu:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.dots{display:flex;gap:8px;margin-bottom:18px}
+.dots span{width:11px;height:11px;border-radius:50%;background:#ffffff33;transition:.4s}
+.dots span.on{background:var(--gold);box-shadow:0 0 12px var(--gold);transform:scale(1.25)}
+.card{width:min(92vw,460px);padding:30px 26px;border-radius:28px;background:#ffffff14;border:1px solid #ffffff33;backdrop-filter:blur(12px);box-shadow:0 12px 50px #0006,0 0 40px #f5c54222;cursor:pointer;user-select:none}
+.card.in{animation:ci .65s cubic-bezier(.2,.9,.3,1.25)}
+@keyframes ci{from{opacity:0;transform:translateY(40px) scale(.88) rotate(-3deg)}to{opacity:1;transform:none}}
+.card .em{font-size:60px;line-height:1.1;animation:bob 3s ease-in-out infinite}
+.card small{color:var(--muted);opacity:.7}
+.hint{font-size:14px;opacity:.75;min-height:22px}
+.big{font-size:clamp(90px,28vw,160px);color:var(--gold);margin:0}
+.big.pop{animation:pop .8s ease-out}
+@keyframes pop{from{transform:scale(2.4);opacity:0}30%{opacity:1}to{transform:scale(1)}}
+.dip{width:min(94vw,560px);background:#fff8e1;color:#3a2a05;border:7px double #d4a017;border-radius:14px;padding:26px 24px;box-shadow:0 14px 60px #000a,0 0 60px #f5c54255;animation:ci .9s cubic-bezier(.2,.9,.3,1.2)}
+.dip h3{font-size:clamp(18px,4.6vw,24px);letter-spacing:2px;text-transform:uppercase;color:#8a5a00}
+.dip h1{color:#5a3a00;font-style:italic;font-size:clamp(28px,7vw,42px)}
+.dip .to{color:#8a5a00;font-size:14px;margin:0}
+.seal{width:62px;height:62px;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;font-size:30px;color:#fff;background:radial-gradient(circle,#ffd45e,#d4a017);box-shadow:0 0 0 4px #fff8e1,0 0 0 6px #d4a017;animation:spin 1s ease-out}
+@keyframes spin{from{transform:rotate(-360deg) scale(0)}}
+#lt{white-space:pre-line;text-align:left;font-family:Georgia,serif;color:#3a2a05;font-size:clamp(15px,3.9vw,17px);line-height:1.6;max-width:none;margin-top:14px}
+.flash{position:fixed;inset:0;z-index:5;background:#fff;pointer-events:none;animation:fo .9s forwards}
+@keyframes fo{to{opacity:0}}
+#mu{position:fixed;right:10px;top:calc(env(safe-area-inset-top,0px) + 8px);z-index:6;background:none;border:0;color:var(--muted);font:13px system-ui,sans-serif;padding:8px;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.blob,.shine,.cap,.card .em{animation:none}.card.in,.dip,.big.pop{animation:none}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+<canvas id="fx"></canvas>
+<button id="mu">♪ Sound: on</button>
+<main id="stage"></main>
+<script>
+// ====== CUSTOMIZE THESE ======
+const NAME='Achoki Esterico', FROM='Your friend', FIRST=NAME.split(' ')[0];
+const M=[
+ {e:'🎓',t:'You did it!',x:`All the late nights, deadlines and doubts led to this moment. Congratulations, ${FIRST}!`},
+ {e:'🌟',t:'Hard work pays off',x:'Every page you read and every exam you faced built the person standing here today.'},
+ {e:'💪',t:'You never gave up',x:'Even when it got tough, you kept going. That strength is what makes you special.'},
+ {e:'🌍',t:'A bright future',x:'Doors are opening, and the world is lucky to be getting someone like you.'},
+ {e:'🤝',t:'We’re so proud',x:'Friends, family and everyone who knows you are cheering the loudest today.'},
+ {e:'🚀',t:'Dream big',x:'This isn’t the finish line, it’s the launch pad. Aim high and go further than you ever imagined.'},
+ {e:'💛',t:'Be proud of yourself',x:'Take a moment to celebrate you. You’ve earned every bit of this joy.'},
+ {e:'🎁',t:'One last thing…',x:'There’s a special surprise waiting just for you. Are you ready?'}];
+const LETTER=`Dear ${FIRST},
+
+Today the whole world gets to see what we already knew: you are capable, determined and full of promise.
+
+Thank you for being who you are. Your effort, your kindness and the way you show up for the people around you have never gone unnoticed. You are appreciated more than words can say.
+
+Congratulations, graduate. Go shine. We will be cheering for you, always.
+
+— ${FROM}`;
+// =============================
+
+const $=s=>document.querySelector(s),S=$('#stage');
+const COL=['#f5c542','#ff6f91','#3ddbd9','#9b8cff','#ffffff','#ff9f43'],pick=a=>a[Math.random()*a.length|0];
+let P=[],W,H,D,fin=0,i=0;
+const cv=$('#fx'),cx=cv.getContext('2d');
+function rs(){D=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*D;cv.height=H*D;cx.setTransform(D,0,0,D,0,0)}
+rs();addEventListener('resize',rs);
+
+/* ---------- confetti + fireworks ---------- */
+function confetti(x,y,n=40,sp=9){if(P.length>650)return;
+  for(let k=0;k<n;k++){const a=-Math.PI/2+(Math.random()-.5)*2.4,s=3+Math.random()*sp;
+    P.push({t:0,x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,g:.18,w:6+Math.random()*6,h:4+Math.random()*5,r:Math.random()*6.28,vr:(Math.random()-.5)*.4,l:90+Math.random()*60,c:pick(COL)})}}
+function firework(x,y){if(P.length>650)return;const c=pick(COL),n=46;
+  for(let k=0;k<n;k++){const a=6.283*k/n,s=2+Math.random()*4;P.push({t:1,x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,g:.05,s:2.6,l:55+Math.random()*25,c:Math.random()<.3?'#fff':c})}}
+function loop(){
+  cx.clearRect(0,0,W,H);
+  if(fin&&Math.random()<.3)P.push({t:0,x:Math.random()*W,y:-12,vx:(Math.random()-.5)*1.5,vy:1+Math.random()*2,g:.01,w:6+Math.random()*6,h:4+Math.random()*5,r:Math.random()*6.28,vr:(Math.random()-.5)*.3,l:420,c:pick(COL)});
+  if(fin&&Math.random()<.018)firework(W*(.12+Math.random()*.76),H*(.1+Math.random()*.35));
+  P=P.filter(p=>{p.vy+=p.g;p.x+=p.vx+(p.t?0:Math.sin(p.r)*.6);p.y+=p.vy;p.vx*=p.t?.985:.995;p.l--;
+    cx.globalAlpha=Math.max(0,Math.min(1,p.l/30));cx.fillStyle=p.c;
+    if(p.t){cx.beginPath();cx.arc(p.x,p.y,p.s,0,6.283);cx.fill()}
+    else{p.r+=p.vr;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()}
+    return p.l>0&&p.y<H+30});
+  cx.globalAlpha=1;requestAnimationFrame(loop)}
+loop();
+document.addEventListener('pointerdown',e=>confetti(e.clientX,e.clientY,10,6));
+
+/* ---------- sound (generated live) ---------- */
+let ac,on=true;const SC=[523.25,587.33,659.25,783.99,880,1046.5,1174.66,1318.51];
+function tone(f,when,d,v,type='sine'){const o=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime+when;o.type=type;o.frequency.value=f;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+d+.05)}
+function chime(k){if(!ac||!on)return;const f=SC[k%SC.length];tone(f,0,.9,.14);tone(f*2,0,.6,.06)}
+function fanfare(){if(!ac||!on)return;[523.25,659.25,783.99,1046.5,1318.51].forEach((f,k)=>{tone(f,k*.12,1.4,.12,'triangle');tone(f/2,k*.12,1.4,.08)})}
+document.addEventListener('pointerdown',()=>{if(!ac){const A=window.AudioContext||window.webkitAudioContext;if(A){ac=new A();ac.resume()}}},{once:true});
+$('#mu').onclick=()=>{on=!on;$('#mu').textContent='♪ Sound: '+(on?'on':'off')};
+
+/* ---------- helpers ---------- */
+function show(h){S.innerHTML=h;S.scrollTop=0}
+function tw(el,t,cb,k=0){if(!el.isConnected)return;el.textContent=t.slice(0,k);if(k<t.length)setTimeout(()=>tw(el,t,cb,k+1),28);else if(cb)cb()}
+function mid(el){const r=el.getBoundingClientRect();return[r.x+r.width/2,r.y+r.height/2]}
+
+/* ---------- screen 1: welcome ---------- */
+function start(){
+  show(`<div class="cap" id="cap" role="button" aria-label="Start">🎓</div><h1 class="shine">Congratulations,<br>${NAME}!</h1><p>It’s graduation season, and today is all about you.</p><button class="btn" id="go">Tap to begin your celebration</button>`);
+  const go=()=>{const[x,y]=mid($('#cap'));confetti(x,y,70,11);chime(0);setTimeout(msgs,500)};
+  $('#go').onclick=go;$('#cap').onclick=go}
+
+/* ---------- screen 2: tap to reveal messages ---------- */
+function msgs(){
+  i=0;
+  show(`<div class="dots">${M.map(()=>'<span></span>').join('')}</div><div class="card" id="card" role="button" tabindex="0"></div><p class="hint" id="hint"></p><button class="btn" id="nx"></button>`);
+  $('#card').onclick=adv;$('#card').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();adv()}};$('#nx').onclick=adv;reveal()}
+function adv(){if(i>=M.length-1){surprise();return}i++;reveal()}
+function reveal(){
+  const m=M[i],c=$('#card'),last=i>=M.length-1;
+  c.classList.remove('in');void c.offsetWidth;
+  c.innerHTML=`<div class="em">${m.e}</div><h2>${m.t}</h2><p style="margin:8px auto">${m.x}</p><small>${i+1} / ${M.length}</small>`;c.classList.add('in');
+  document.querySelectorAll('.dots span').forEach((d,k)=>d.classList.toggle('on',k<=i));
+  const[x,y]=mid(c);confetti(x,y,26+i*6,8+i);chime(i);
+  $('#nx').textContent=last?'Open your surprise 🎁':'Reveal next ✨';
+  $('#hint').textContent=last?'':'Keep tapping to reveal more…'}
+
+/* ---------- screen 3: countdown + surprise ---------- */
+function surprise(){
+  show('<h1 class="big" id="cd"></h1>');
+  let n=3;
+  const t=()=>{if(n>0){const e=$('#cd');e.textContent=n;e.classList.remove('pop');void e.offsetWidth;e.classList.add('pop');chime(n+2);n--;setTimeout(t,850)}else boom()};t()}
+function boom(){
+  fin=1;document.body.insertAdjacentHTML('beforeend','<div class="flash"></div>');setTimeout(()=>document.querySelector('.flash')?.remove(),1000);
+  fanfare();for(let k=0;k<7;k++)setTimeout(()=>firework(W*(.1+Math.random()*.8),H*(.1+Math.random()*.4)),k*220);
+  show(`<div class="dip"><div class="seal">★</div><h3>Certificate of Awesomeness</h3><p class="to">Proudly awarded to</p><h1>${NAME}</h1><p id="lt"></p></div><button class="btn" id="again" style="visibility:hidden">Celebrate again 🎉</button>`);
+  setTimeout(()=>tw($('#lt'),LETTER,()=>{const b=$('#again');b.style.visibility='visible';
+    b.onclick=()=>{fanfare();for(let k=0;k<6;k++)setTimeout(()=>{firework(W*(.1+Math.random()*.8),H*(.1+Math.random()*.4));confetti(W/2,H*.6,40,12)},k*200)}}),900)}
+
+start();
+</script>
+</body>
+</html>
